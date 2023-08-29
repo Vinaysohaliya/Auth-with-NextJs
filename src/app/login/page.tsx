@@ -27,10 +27,8 @@ export default function LoginPage() {
 
     const login=async()=>{
       try {
-        console.log(user);
-        
-        const response = await axios.post("/api/users/login", user);
-        console.log(response.data);
+        const userData= await axios.post("/",user);
+        console.log(userData.data);
         router.push("/profile")
         
       } catch (error:any) {
