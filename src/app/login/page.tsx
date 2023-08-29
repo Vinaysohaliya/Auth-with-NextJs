@@ -27,7 +27,7 @@ export default function LoginPage() {
 
     const login=async()=>{
       try {
-        const userData= await axios.post("/",user);
+        const userData= await axios.post("/api/users/login",user);
         console.log(userData.data);
         router.push("/profile")
         
